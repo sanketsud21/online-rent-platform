@@ -3,6 +3,7 @@ const router=new express.Router()
 const auth=require('../middleware/auth')
 const Item=require('../model/item')
 
+
 router.post('/items',auth,async(req,res)=>{
     const item=new Item({
         ...req.body,
