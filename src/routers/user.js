@@ -40,9 +40,6 @@ router.post('/users/logout',auth,async(req,res)=>{
 
 })
 
-router.get('/users/me',auth, async(req,res)=>{
-    res.send(req.user)
- })
 router.delete('/users/me',auth,async(req,res)=>{
     try {
         const user=await User.findByIdAndDelete(req.user._id)
